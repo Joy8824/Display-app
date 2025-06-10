@@ -41,7 +41,7 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
+    <div className="h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
       <h1 className="text-3xl font-semibold mb-6 text-center">Artwork Review</h1>
 
       <div className="w-full max-w-6xl h-[80vh] mb-6">
