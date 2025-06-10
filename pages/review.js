@@ -1,7 +1,7 @@
 // pages/review.js
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import './src/output.css';
+import '/src/output.css';
 
 export default function ReviewPage() {
   const router = useRouter();
