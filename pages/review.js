@@ -34,7 +34,7 @@ export default function ReviewPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-50">
-      <h1 className="text-3xl font-semibold text-center mb-6">Artwork Review</h1>
+      <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
       <div className="w-full max-w-6xl h-[80vh]">
         <iframe
           src={decodedUrl}
