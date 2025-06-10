@@ -33,7 +33,7 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-green-500">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
       <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
       <div className="w-full max-w-6xl h-[80vh]">
         <iframe
