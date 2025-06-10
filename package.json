@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:css: "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "repository": {
     "type": "git",
