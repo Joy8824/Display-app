@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "build:css": "tailwindcss build global.css -o output.css"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
