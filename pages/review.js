@@ -25,9 +25,6 @@ export default function ReviewPage() {
       });
       alert(`You selected: ${decision}`);
       window.close(); //close window
-      if (!window.close()) { // if window does  not close in it was opened in a new tab or might be blocked by browser
-        alert ("You can now close this tab");
-      }
     } catch (err) {
       console.error('Error submitting decision:', err);
       alert('Something went wrong.');
