@@ -37,16 +37,16 @@ return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    {/* PDF wrapper with relative positioning */}
-    <div className="relative w-full max-w-6xl h-[80vh] border-4 border-yellow-500 bg-gray-100">
+    {/* ✅ Force container to have height & positioning */}
+    <div className="relative w-full max-w-6xl aspect-video border border-yellow-500">
 
-      {/* PDF iframe preview */}
+      {/* ✅ The iframe gets full space but respects z-index */}
       <iframe
         src={decodedUrl}
-        className="w-full h-full border rounded-md shadow-lg z-0"
+        className="absolute inset-0 w-full h-full border rounded-md shadow-lg z-0"
       />
 
-      {/* Floating buttons centered above PDF */}
+      {/* ✅ The floating buttons centered on top */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/80 p-2 rounded shadow">
         <button
           onClick={() => handleResponse('approved')}
@@ -64,6 +64,7 @@ return (
     </div>
   </div>
 );
+
 
 
 }
