@@ -49,22 +49,17 @@ return (
 
       {/* ✅ Centered floating buttons */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
-        <button
-          onClick={() => handleResponse('approved')}
-          className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-        >
+        <button onClick={() => handleResponse('approved')} className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700" >
           Approve
         </button>
-        <button
-          onClick={() => handleResponse('rejected')}
-          className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
-        >
+        <button onClick={() => handleResponse('rejected')} className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700" >
           Reject
         </button>
       </div>
     </div>
   </div>
 );
+
 
 
 }
