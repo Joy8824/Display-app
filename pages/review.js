@@ -37,16 +37,16 @@ return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
         {/* Mobile-friendly floating buttons */}
-      <div className="absolute top-4 right-4 sm:flex sm:flex-col flex gap-2 sm:gap-3 z-10">
+      <div className="absolute top-4 right-4 gap-6 mt-6 sm:flex sm:flex-col flex gap-2 sm:gap-3 z-10">
         <button
           onClick={() => handleResponse('approved')}
-          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
+          className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
         >
           Approve
         </button>
         <button
           onClick={() => handleResponse('rejected')}
-          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 text-sm sm:text-base"
+          className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 text-sm sm:text-base"
         >
           Reject
         </button>
