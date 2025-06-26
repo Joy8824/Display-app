@@ -38,37 +38,36 @@ return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    {/* Flex layout: stacked on mobile, side-by-side on large screens */}
     <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-4">
 
-      {/* PDF preview area */}
-      <div className="relative flex-1 min-h-[80vh] border border-gray-300 rounded bg-white overflow-hidden">
+      {/* PDF + Buttons Container */}
+      <div className="flex-1 flex flex-col relative border border-gray-300 rounded bg-white overflow-hidden">
 
-        {/* Floating centered buttons */}
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 inline-flex gap-2 bg-white/90 p-2 rounded shadow">
+        {/* Floating centered buttons (not absolute) */}
+        <div className="flex justify-center gap-4 py-4 bg-white z-10">
           <button
             onClick={() => handleResponse('approved')}
-            className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
+            className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
           >
             Approve
           </button>
           <button
             onClick={() => handleResponse('rejected')}
-            className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 text-sm sm:text-base"
+            className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
           >
             Reject
           </button>
         </div>
 
-        {/* PDF iframe */}
+        {/* PDF iframe (normal flow, not absolute) */}
         <iframe
           src={decodedUrl}
-          className="absolute inset-0 w-full h-full border-none z-0"
+          className="flex-1 w-full h-[75vh] border-none"
           title="PDF Preview"
         />
       </div>
 
-      {/* Comment box (only shows on lg+) */}
+      {/* Comments section */}
       <div className="hidden lg:flex flex-col w-[300px] border border-gray-300 rounded p-4 bg-white shadow">
         <label htmlFor="comments" className="font-semibold mb-2">Comments</label>
         <textarea
@@ -83,6 +82,7 @@ return (
     </div>
   </div>
 );
+
 
 
 
