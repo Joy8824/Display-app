@@ -43,12 +43,12 @@ return (
       {/* ✅ Absolutely fill the PDF preview */}
       <iframe
         src={decodedUrl}
-        className="absolute inset-0 w-full h-full border-none z-0"
+        className=" inset-0 w-full h-full border-none z-0"
         title="PDF Preview"
       />
 
       {/* ✅ Centered floating buttons */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
+      <div className="sticky top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
         <button onClick={() => handleResponse('approved')} className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700" >
           Approve
         </button>
