@@ -36,14 +36,7 @@ export default function ReviewPage() {
 return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
-
-    <div className="relative w-full max-w-6xl h-[80vh]">
-      <iframe
-        src={decodedUrl}
-        className="w-full h-full border rounded-md shadow-lg"
-      />
-
-      {/* Mobile-friendly floating buttons */}
+        {/* Mobile-friendly floating buttons */}
       <div className="absolute top-4 right-4 sm:flex sm:flex-col flex gap-2 sm:gap-3 z-10">
         <button
           onClick={() => handleResponse('approved')}
@@ -58,8 +51,16 @@ return (
           Reject
         </button>
       </div>
+
+    <div className="relative w-full max-w-6xl h-[80vh]">
+      <iframe
+        src={decodedUrl}
+        className="w-full h-full border rounded-md shadow-lg"
+      />
+
     </div>
   </div>
 );
+
 
 }
