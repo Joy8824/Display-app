@@ -33,30 +33,33 @@ export default function ReviewPage() {
 
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
-      <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
-      <div className="w-full max-w-6xl h-[80vh]">
-        <iframe
-          src={decodedUrl}
-          className="w-full h-full border rounded-md shadow-lg"
-        />
-            {/* Floating buttons */}
-         <div className="absolute top-4 right-4 flex gap-4 z-10">
+return (
+  <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
+    <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
+
+    <div className="relative w-full max-w-6xl h-[80vh]">
+      <iframe
+        src={decodedUrl}
+        className="w-full h-full border rounded-md shadow-lg"
+      />
+
+      {/* Mobile-friendly floating buttons */}
+      <div className="absolute top-4 right-4 sm:flex sm:flex-col flex gap-2 sm:gap-3 z-10">
         <button
           onClick={() => handleResponse('approved')}
-          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
+          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
         >
           Approve
         </button>
         <button
           onClick={() => handleResponse('rejected')}
-          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
+          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 text-sm sm:text-base"
         >
           Reject
         </button>
       </div>
-  
     </div>
-  );
+  </div>
+);
+
 }
