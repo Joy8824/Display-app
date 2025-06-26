@@ -36,8 +36,15 @@ export default function ReviewPage() {
 return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
-        {/* Mobile-friendly floating buttons */}
-      <div className="absolute top-4 right-4 gap-6 mt-6 sm:flex sm:flex-col flex gap-2 sm:gap-3 z-10">
+
+    <div className="relative w-full max-w-6xl h-[80vh]">
+      <iframe
+        src={decodedUrl}
+        className="w-full h-full border rounded-md shadow-lg"
+      />
+
+      {/* Centered floating buttons above the PDF */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 flex sm:flex-col gap-2 sm:gap-3 z-10">
         <button
           onClick={() => handleResponse('approved')}
           className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
@@ -51,13 +58,6 @@ return (
           Reject
         </button>
       </div>
-
-    <div className="relative w-full max-w-6xl h-[80vh]">
-      <iframe
-        src={decodedUrl}
-        className="w-full h-full border rounded-md shadow-lg"
-      />
-
     </div>
   </div>
 );
