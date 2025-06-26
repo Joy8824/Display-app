@@ -41,21 +41,22 @@ export default function ReviewPage() {
           src={decodedUrl}
           className="w-full h-full border rounded-md shadow-lg"
         />
-      </div>
-      <div className="flex justify-center gap-6 mt-6">
+            {/* Floating buttons */}
+         <div className="absolute top-4 right-4 flex gap-4 z-10">
         <button
           onClick={() => handleResponse('approved')}
-          className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
         >
           Approve
         </button>
         <button
           onClick={() => handleResponse('rejected')}
-          className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
+          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
         >
           Reject
         </button>
       </div>
+  
     </div>
   );
 }
