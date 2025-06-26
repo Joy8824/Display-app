@@ -6,6 +6,7 @@ export default function ReviewPage() {
   const router = useRouter();
   const { sessionId, pdfUrl } = router.query;
   const [decodedUrl, setDecodedUrl] = useState(null);
+  const [comments, setComments] = useState('');
 
   useEffect(() => {
     if (pdfUrl) {
@@ -21,7 +22,7 @@ export default function ReviewPage() {
       await fetch('https://hook.us2.make.com/6q6ss97p4n4dhexbbitcz6n9r4o9sb4v', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId, decision }),
+        body: JSON.stringify({ sessionId, decision, comments }),
       });
       alert(`You selected: ${decision}`);
       window.close(); //close window
@@ -43,12 +44,12 @@ return (
       {/* ✅ Absolutely fill the PDF preview */}
       <iframe
         src={decodedUrl}
-        className=" inset-0 w-full h-full border-none z-0"
+        className="absolute inset-0 w-full h-full border-none z-0"
         title="PDF Preview"
       />
 
       {/* ✅ Centered floating buttons */}
-      <div className="sticky top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
         <button onClick={() => handleResponse('approved')} className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700" >
           Approve
         </button>
@@ -57,6 +58,18 @@ return (
         </button>
       </div>
     </div>
+        {/* Comments section */}
+  <div className="hidden lg:flex flex-col w-[250px] border border-gray-300 rounded p-4 bg-white shadow">
+    <label htmlFor="comments" className="font-semibold mb-2">Comments</label>
+    <textarea
+      id="comments"
+      name="comments"
+      rows={10}
+      placeholder="Add feedback here..."
+      className="w-full p-2 border border-gray-300 rounded resize-none"
+      onChange={(e) => setComments(e.target.value)}
+    />
+  </div>    
   </div>
 );
 
