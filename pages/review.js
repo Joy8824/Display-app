@@ -35,42 +35,52 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
 return (
-  <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
-    <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
+ <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
+  <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    {/* ✅ PDF container defines size and positioning */}
-    <div className="relative w-full max-w-6xl" style={{ height: '80vh' }}>
-      
-      {/* ✅ Absolutely fill the PDF preview */}
-      <iframe
-        src={decodedUrl}
-        className="absolute inset-0 w-full h-full border-none z-0"
-        title="PDF Preview"
-      />
-
-      {/* ✅ Centered floating buttons */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
-        <button onClick={() => handleResponse('approved')} className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700" >
+  <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-4">
+    
+    {/* PDF preview area */}
+    <div className="relative flex-1 min-h-[80vh] border border-gray-300 rounded">
+      {/* Floating buttons */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 inline-flex gap-2 bg-white/90 p-2 rounded shadow">
+        <button
+          onClick={() => handleResponse('approved')}
+          className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+        >
           Approve
         </button>
-        <button onClick={() => handleResponse('rejected')} className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700" >
+        <button
+          onClick={() => handleResponse('rejected')}
+          className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
+        >
           Reject
         </button>
       </div>
+
+      {/* PDF iframe */}
+      <iframe
+        src={decodedUrl}
+        className="absolute inset-0 w-full h-full z-0 rounded"
+        title="PDF Preview"
+      />
     </div>
-        {/* Comments section */}
-  <div className="hidden lg:flex flex-col w-[250px] border border-gray-300 rounded p-4 bg-white shadow">
-    <label htmlFor="comments" className="font-semibold mb-2">Comments</label>
-    <textarea
-      id="comments"
-      name="comments"
-      rows={10}
-      placeholder="Add feedback here..."
-      className="w-full p-2 border border-gray-300 rounded resize-none"
-      onChange={(e) => setComments(e.target.value)}
-    />
-  </div>    
+
+    {/* Comment box (visible on large screens) */}
+    <div className="hidden lg:flex flex-col w-[300px] border border-gray-300 rounded p-4 bg-white shadow">
+      <label htmlFor="comments" className="font-semibold mb-2">Comments</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows={10}
+        placeholder="Add feedback here..."
+        className="w-full p-2 border border-gray-300 rounded resize-none"
+        onChange={(e) => setComments(e.target.value)}
+      />
+    </div>
   </div>
+</div>
+
 );
 
 
