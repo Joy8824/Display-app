@@ -23,7 +23,7 @@ export default function ReviewPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId, decision }),
       });
-      alert(You selected: ${decision});
+      alert(`You selected: ${decision}`);
       window.close(); //close window
     } catch (err) {
       console.error('Error submitting decision:', err);
