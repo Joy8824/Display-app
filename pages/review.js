@@ -41,7 +41,7 @@ export default function ReviewPage() {
     <div className="relative w-full max-w-6xl h-[80vh]">
 
       {/* This is the floating button block */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex sm:flex-col gap-2 sm:gap-3 z-10">
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex gap-2 border border-blue-500">
         <button
           onClick={() => handleResponse('approved')}
           className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
