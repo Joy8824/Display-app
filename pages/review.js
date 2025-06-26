@@ -33,15 +33,21 @@ export default function ReviewPage() {
 
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
- return (
+return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    {/* Container must be relative so buttons can float inside it */}
+    {/* PDF wrapper with relative positioning */}
     <div className="relative w-full max-w-6xl h-[80vh]">
 
-      {/* This is the floating button block */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+      {/* PDF iframe preview */}
+      <iframe
+        src={decodedUrl}
+        className="w-full h-full border rounded-md shadow-lg"
+      />
+
+      {/* Floating buttons centered above PDF */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 sm:flex-col sm:gap-3 z-10 bg-white/80 p-2 rounded shadow">
         <button
           onClick={() => handleResponse('approved')}
           className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 text-sm sm:text-base"
@@ -55,14 +61,9 @@ export default function ReviewPage() {
           Reject
         </button>
       </div>
-
-      {/* PDF iframe preview */}
-      <iframe
-        src={decodedUrl}
-        className="w-full h-full border rounded-md shadow-lg"
-      />
     </div>
   </div>
 );
+
 
 }
