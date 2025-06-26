@@ -37,17 +37,17 @@ return (
   <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    {/*  This box wraps ONLY the PDF and floating buttons */}
-    <div className="relative w-full max-w-6xl border-4 border-yellow-400 rounded overflow-hidden" style={{ height: '80vh' }}>
+    {/* ✅ PDF container defines size and positioning */}
+    <div className="relative w-full max-w-6xl" style={{ height: '80vh' }}>
       
-      {/* The PDF fills the box */}
+      {/* ✅ Absolutely fill the PDF preview */}
       <iframe
         src={decodedUrl}
-        className="w-full h-full border-none z-0"
+        className="absolute inset-0 w-full h-full border-none z-0"
         title="PDF Preview"
       />
 
-      {/*  Floating buttons CENTERED OVER the PDF */}
+      {/* ✅ Centered floating buttons */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 inline-flex gap-2 z-10 bg-white/90 p-2 rounded shadow">
         <button
           onClick={() => handleResponse('approved')}
