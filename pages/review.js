@@ -38,7 +38,7 @@ return (
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
     {/* PDF wrapper with relative positioning */}
-    <div className="relative w-full max-w-6xl h-[80vh]">
+    <div className="relative w-full max-w-6xl h-[80vh] border-4 border-yellow-500 bg-gray-100">
 
       {/* PDF iframe preview */}
       <iframe
