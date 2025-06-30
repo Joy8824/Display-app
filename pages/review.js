@@ -38,7 +38,7 @@ return (
   <div className="flex text-white h-screen">
   <div className="bg-gray-800">Menu</div>
   <div className="bg-gray-700">Comments</div>
-  <div className="bg-gray-600">Pdf</div>
+  <div className="bg-gray-600 flex-1">Pdf</div>
   </div>
 );
 
