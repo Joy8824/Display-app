@@ -45,7 +45,20 @@ return (
       {/* Commets Panel */}
   <div className="bg-gray-700 w-60 flex flex-col">
     <div className="p-4 shadow-md font-semibold">Comments</div>
-    <div className="p-4 flex-1 overflow-y-auto text-sm">Message</div>
+    <div className="p-4 flex-1 flex flex-col">
+  <label htmlFor="comments" className="font-semibold mb-2 text-gray-800">
+    Comments
+  </label>
+  <textarea
+    id="comments"
+    name="comments"
+    rows={12}
+    placeholder="Add feedback here..."
+    className="w-full p-2 border border-gray-300 rounded resize-none text-gray-900"
+    onChange={(e) => setComments(e.target.value)}
+  />
+</div>
+
   </div>
         {/* PDF Panel */}
   <div className="bg-gray-600 flex-1 flex flex-col">
