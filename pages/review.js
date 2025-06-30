@@ -35,72 +35,72 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
 return (
-  <div className="flex text-white h-screen w-screen overflow-hidden">
-    {/* sidebar Avatar */}
-  <div className="bg-gray-800 p-4">
-    <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center">
-      WYB
-    </div>
-  </div>
-      {/* Commets Panel */}
-  <div className="bg-gray-700 w-60 flex flex-col">
-    <div className="p-4 shadow-md font-semibold">Comments</div>
-    <div className="p-4 flex-1 flex flex-col">
-  <label htmlFor="comments" className="font-semibold mb-2 text-gray-800">
-    Comments
-  </label>
-  <textarea
-    id="comments"
-    name="comments"
-    rows={12}
-    placeholder="Add feedback here..."
-    className="w-full p-2 border border-gray-300 rounded resize-none text-gray-900"
-    onChange={(e) => setComments(e.target.value)}
-  />
-</div>
-
-  </div>
-        {/* PDF Panel */}
-  <div className="bg-gray-600 flex-1 flex flex-col">
-     {/* Header and Buttons */}
-    <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
-      <span className="font-semibold text-white">Graphic Proof</span>
-      <div className="flex-gap-2">
-      <button
-            onClick={() => handleResponse('approved')}
-            className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-          >
-            Approve
-          </button>
-          <button
-            onClick={() => handleResponse('rejected')}
-            className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
-          >
-            Reject
-          </button>
+  <div className="flex flex-col min-h-screen w-screen bg-gray-100 overflow-hidden">
+    {/* Main content row (avatar + comments + PDF) */}
+    <div className="flex flex-1 text-white overflow-hidden">
+      {/* Sidebar Avatar */}
+      <div className="bg-gray-800 p-4">
+        <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center">
+          WYB
+        </div>
       </div>
-    </div>
-  {/* Pdf Viewer */}
-    <div className="flex-1">
+
+      {/* Comments Panel */}
+      <div className="bg-gray-700 w-60 flex flex-col">
+        <div className="p-4 shadow-md font-semibold">Comments</div>
+        <div className="p-4 flex-1 flex flex-col">
+          <label htmlFor="comments" className="font-semibold mb-2 text-gray-100">
+            Comments
+          </label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows={12}
+            placeholder="Add feedback here..."
+            className="w-full p-2 border border-gray-300 rounded resize-none text-gray-900"
+            onChange={(e) => setComments(e.target.value)}
+          />
+        </div>
+      </div>
+
+      {/* PDF Panel */}
+      <div className="bg-gray-600 flex-1 flex flex-col">
+        {/* Header + Buttons */}
+        <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
+          <span className="font-semibold text-white">Graphic Proof</span>
+          <div className="flex gap-2">
+            <button
+              onClick={() => handleResponse('approved')}
+              className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+            >
+              Approve
+            </button>
+            <button
+              onClick={() => handleResponse('rejected')}
+              className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
+            >
+              Reject
+            </button>
+          </div>
+        </div>
+
+        {/* PDF Viewer */}
+        <div className="flex-1">
           <iframe
             src={decodedUrl}
             className="w-full h-full border-none"
             title="PDF Preview"
           />
         </div>
+      </div>
+    </div>
 
+    {/*  Fixed Footer */}
+    <footer className="bg-gray-800 text-white text-center py-3">
+      &copy; {new Date().getFullYear()} JoyDisplays. All rights reserved.
+    </footer>
   </div>
-  <footer className="w-full bg-gray-800 text-white text-center py-3 fixed bottom-0 left-0">
-  &copy; {new Date().getFullYear()} JoyDisplays. All rights reserved.
-</footer>
-
-
-  </div>
-  
 );
-
-
-
 
 
 
