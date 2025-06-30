@@ -64,7 +64,7 @@ return (
   <div className="bg-gray-600 flex-1 flex flex-col">
      {/* Header and Buttons */}
     <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
-      <span className="font-semibold text-white">PDF Proof</span>
+      <span className="font-semibold text-white">Graphic Proof</span>
       <div className="flex-gap-2">
       <button
             onClick={() => handleResponse('approved')}
@@ -90,7 +90,13 @@ return (
         </div>
 
   </div>
+  <footer className="w-full bg-gray-800 text-white text-center py-3 fixed bottom-0 left-0">
+  &copy; {new Date().getFullYear()} JoyDisplays. All rights reserved.
+</footer>
+
+
   </div>
+  
 );
 
 
