@@ -36,19 +36,24 @@ export default function ReviewPage() {
 
 return (
   <div className="flex text-white h-screen">
+    {/* sidebar Avatar */}
   <div className="bg-gray-800 p-4">
-    <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex tiems-center justify-center">
+    <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center">
       WYB
     </div>
   </div>
+      {/* Commets Panel */}
   <div className="bg-gray-700 w-60 flex flex-col">
-    <div className="p-4 shadow-md">Comments</div>
-    <div className="p-4 flex-1">Message</div>
+    <div className="p-4 shadow-md font-semibold">Comments</div>
+    <div className="p-4 flex-1 overflow-y-auto text-sm">Message</div>
   </div>
+        {/* PDF Panel */}
   <div className="bg-gray-600 flex-1 flex flex-col">
-    <div className="p-4 shadow-md">Pdf Proof</div>
-    <div className="p-4 flex-1 bg-black">
-    <button
+     {/* Header and Buttons */}
+    <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
+      <span className="font-semibold text-white">PDF Proof</span>
+      <div className="flex-gap-2">
+      <button
             onClick={() => handleResponse('approved')}
             className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
           >
@@ -60,7 +65,9 @@ return (
           >
             Reject
           </button>
+      </div>
     </div>
+  {/* Pdf Viewer */}
     <div className="flex-1">
           <iframe
             src={decodedUrl}
