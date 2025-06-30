@@ -42,18 +42,8 @@ return (
     </div>
   </div>
   <div className="bg-gray-700 w-60 flex flex-col">
-    <div className="p-4"></div>
-    <label htmlFor="comments" className="font-semibold mb-2">
-          Comments
-        </label> 
-    <textarea
-          id="comments"
-          name="comments"
-          rows={16}
-          placeholder="Add feedback here..."
-          className="w-full p-2 border border-gray-300 rounded resize-none"
-          onChange={(e) => setComments(e.target.value)}
-        />
+    <div className="p-4 shadow-md">Comments</div>
+    <div className="p-4 flex-1">Message</div>
   </div>
   <div className="bg-gray-600 flex-1 flex flex-col">
     <div className="p-4 shadow-md">Pdf Proof</div>
@@ -78,7 +68,7 @@ return (
             title="PDF Preview"
           />
         </div>
-        
+
   </div>
   </div>
 );
