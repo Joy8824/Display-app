@@ -35,7 +35,7 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
 return (
-  <div className="flex text-white h-screen">
+  <div className="flex text-white h-screen w-screen overflow-hidden">
     {/* sidebar Avatar */}
   <div className="bg-gray-800 p-4">
     <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center">
