@@ -59,7 +59,7 @@ return (
         </div>
 
         {/* PDF Viewer */}
-        <div className="h-full">
+        <div className="h-9/10">
           <iframe
             src={decodedUrl}
             className="w-full h-full border-none"
