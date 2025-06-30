@@ -89,7 +89,7 @@ return (
         <div className="flex-1">
           <iframe
             src={decodedUrl}
-            className="w-full h-full border-none"
+            className="w-full h-auto border-none"
             title="PDF Preview"
           />
         </div>
