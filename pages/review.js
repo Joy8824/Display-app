@@ -67,7 +67,7 @@ return (
       <div className="bg-gray-600 flex-1 flex flex-col">
         {/* Header + Buttons */}
         <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
-          <span className="font-semibold text-white">Graphic Proof</span>
+          <div className="p-4 shadow-md font-semibold">Graphic Proof</div>
           <div className="flex gap-2">
             <button
               onClick={() => handleResponse('approved')}
@@ -81,6 +81,7 @@ return (
             >
               Reject
             </button>
+            
           </div>
         </div>
 
