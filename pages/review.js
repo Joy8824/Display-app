@@ -67,7 +67,9 @@ return (
             title="PDF Preview"
           />
         </div>
-              {/* Right side: Comments (1/3 width) */}
+      </div>
+
+      {/* Right side: Comments (1/3 width) */}
       <div className="w-1/3 flex flex-col border border-gray-300 rounded p-4 bg-white shadow">
         <label htmlFor="comments" className="font-semibold mb-2">
           Comments
@@ -80,7 +82,6 @@ return (
           className="w-full p-2 border border-gray-300 rounded resize-none"
           onChange={(e) => setComments(e.target.value)}
         />
-      </div>
       </div>
     </div>
   </div>
