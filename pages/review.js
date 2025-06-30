@@ -66,8 +66,8 @@ return (
       {/* PDF Panel */}
       <div className="bg-gray-600 flex-1 flex flex-col">
         {/* Header + Buttons */}
-        <div className="p-4 shadow-md bg-gray-700 flex justify-between items-center">
-          <div className="p-4 shadow-md font-semibold">Graphic Proof</div>
+        <div className="p-4 shadow-md bg-gray-700 flex flex-col">
+          <div className="p-4 shadow-md font-semibold justify-between items-center">Graphic Proof</div>
           <div className="flex gap-2">
             <button
               onClick={() => handleResponse('approved')}
