@@ -36,9 +36,22 @@ export default function ReviewPage() {
 
 return (
   <div className="flex text-white h-screen">
-  <div className="bg-gray-800 p-4">Menu</div>
-  <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex tiems-center justify-center">WYB</div>
-  <div className="bg-gray-700 p-4 w-60">Comments</div>
+  <div className="bg-gray-800 p-4">
+    <div className="bg-white text-gray-800 w-12 h-12 rounded-full flex tiems-center justify-center">
+      WYB
+    </div>
+  </div>
+  <div className="bg-gray-700 p-4 w-60 flex flex-col">
+    <div>Comments</div>
+    <textarea
+          id="comments"
+          name="comments"
+          rows={16}
+          placeholder="Add feedback here..."
+          className="w-full p-2 border border-gray-300 rounded resize-none"
+          onChange={(e) => setComments(e.target.value)}
+        />
+  </div>
   <div className="bg-gray-600 flex-1 p-4">Pdf</div>
   </div>
 );
