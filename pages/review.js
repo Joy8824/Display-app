@@ -38,10 +38,10 @@ return (
   <div className="flex flex-col items-center justify-center w-full p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
-    <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-6">
+    <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-6 h-[80vh]">
       
       {/* Left side: PDF + Buttons (2/3 width) */}
-      <div className="w-4/6 flex flex-col border border-gray-300 rounded bg-white shadow">
+      <div className="w-2/3 flex flex-col border border-gray-300 rounded bg-white shadow overflow-hidden">
         {/* Buttons */}
         <div className="flex justify-center gap-4 p-4 border-b border-gray-200 bg-white">
           <button
@@ -59,7 +59,7 @@ return (
         </div>
 
         {/* PDF Viewer */}
-        <div className="h-9/10">
+        <div className="flex-1">
           <iframe
             src={decodedUrl}
             className="w-full h-full border-none"
