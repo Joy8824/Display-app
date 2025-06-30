@@ -55,7 +55,7 @@ return (
           onChange={(e) => setComments(e.target.value)}
         />
   </div>
-  <div className="bg-gray-600 flex-1">
+  <div className="bg-gray-600 flex-1 flex flex-col">
     <div className="p-4 shadow-md">Pdf Proof</div>
     <div className="p-4 flex-1 bg-black">
     <button
@@ -71,6 +71,14 @@ return (
             Reject
           </button>
     </div>
+    <div className="flex-1">
+          <iframe
+            src={decodedUrl}
+            className="w-full h-full border-none"
+            title="PDF Preview"
+          />
+        </div>
+        
   </div>
   </div>
 );
