@@ -41,7 +41,7 @@ return (
     <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-6">
       
       {/* Left side: PDF + Buttons (2/3 width) */}
-      <div className="w-2/3 flex flex-col border border-gray-300 rounded bg-white shadow">
+      <div className="w-4/6 flex flex-col border border-gray-300 rounded bg-white shadow">
         {/* Buttons */}
         <div className="flex justify-center gap-4 p-4 border-b border-gray-200 bg-white">
           <button
@@ -69,7 +69,7 @@ return (
       </div>
 
       {/* Right side: Comments (1/3 width) */}
-      <div className="w-1/3 flex flex-col border border-gray-300 rounded p-4 bg-white shadow">
+      <div className="w-2/6 flex flex-col border border-gray-300 rounded p-4 bg-white shadow">
         <label htmlFor="comments" className="font-semibold mb-2">
           Comments
         </label>
