@@ -57,7 +57,7 @@ return (
             name="comments"
             rows={12}
             placeholder="Add feedback here..."
-            className="w-full p-2 border border-gray-300 rounded resize-none text-gray-900"
+            className="w-full p-2 border border-gray-300 rounded resize-none text-white"
             onChange={(e) => setComments(e.target.value)}
           />
         </div>
