@@ -45,8 +45,7 @@ return (
     <div className="p-4"></div>
     <label htmlFor="comments" className="font-semibold mb-2">
           Comments
-        </label>
-
+        </label> 
     <textarea
           id="comments"
           name="comments"
@@ -56,7 +55,23 @@ return (
           onChange={(e) => setComments(e.target.value)}
         />
   </div>
-  <div className="bg-gray-600 flex-1 p-4">Pdf</div>
+  <div className="bg-gray-600 flex-1">
+    <div className="p-4 shadow-md">Pdf Proof</div>
+    <div className="p-4 flex-1 bg-black">
+    <button
+            onClick={() => handleResponse('approved')}
+            className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+          >
+            Approve
+          </button>
+          <button
+            onClick={() => handleResponse('rejected')}
+            className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700"
+          >
+            Reject
+          </button>
+    </div>
+  </div>
   </div>
 );
 
