@@ -35,7 +35,8 @@ export default function ReviewPage() {
   if (!decodedUrl) return <p className="text-center mt-10">Loading PDF...</p>;
 
 return (
-  <div className="flex flex-col items-center justify-center w-full p-6 bg-white">
+  <div className="min-h-screen flex flex-col bg-white">
+  <div className="flex flex-col items-center w-full p-6 bg-white">
     <h1 className="text-3xl font-semibold text-center mb-6">Graphic Proofs</h1>
 
     <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-6 h-[80vh]">
@@ -84,6 +85,7 @@ return (
       </div>
     </div>
   </div>
+</div>
 );
 
 
