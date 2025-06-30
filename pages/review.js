@@ -70,7 +70,8 @@ return (
       </div>
 
       {/* Right side: Comments (1/3 width) */}
-      <div className="w-1/3 flex flex-row md:flex-col border border-gray-300 rounded p-4 bg-white shadow">
+    </div>
+    <div className="w-1/3 flex flex-row md:flex-col border border-gray-300 rounded p-4 bg-white shadow">
         <label htmlFor="comments" className="font-semibold mb-2">
           Comments
         </label>
@@ -83,7 +84,6 @@ return (
           onChange={(e) => setComments(e.target.value)}
         />
       </div>
-    </div>
   </div>
 </div>
 );
