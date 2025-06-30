@@ -42,7 +42,7 @@ return (
     <div className="flex-auto flex-col md:flex-row w-full max-w-6xl gap-6 h-[100vh]">
       
       {/* Left side: PDF + Buttons (2/3 width) */}
-      <div className="w-2/3 flex flex-col border border-gray-300 rounded bg-white shadow overflow-hidden">
+      <div className="w-full flex flex-col border border-gray-300 rounded bg-white shadow overflow-hidden">
         {/* Buttons */}
         <div className="flex justify-center gap-4 p-4 border-b border-gray-200 bg-white">
           <button
