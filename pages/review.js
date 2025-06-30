@@ -41,8 +41,12 @@ return (
       WYB
     </div>
   </div>
-  <div className="bg-gray-700 p-4 w-60 flex flex-col">
-    <div>Comments</div>
+  <div className="bg-gray-700 w-60 flex flex-col">
+    <div className="p-4"></div>
+    <label htmlFor="comments" className="font-semibold mb-2">
+          Comments
+        </label>
+
     <textarea
           id="comments"
           name="comments"
